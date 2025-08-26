@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Halo Vermont | Hair Studio in Winooski, VT</title>
+  <meta name="description" content="Halo Vermont Hair Studio — Where your inner light shines. Cuts, color, balayage, treatments, and more in Winooski, Vermont. Book online." />
+  <meta property="og:title" content="Halo Vermont | Hair Studio" />
+  <meta property="og:description" content="Where your inner light shines. Book online." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/Halo-LogoV1.gif" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --fg: #f5f5f5;
+      --muted: #cccccc;
+      --gold: #d4af37;
+      --panel: #141414;
+      --accent: #d4af37;
+      --maxw: 1100px;
+      --radius: 18px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--fg);
+      background: radial-gradient(1200px 1200px at 10% 0%, #111 0%, var(--bg) 60%);
+      line-height: 1.55;
+    }
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11,11,11,.7);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(212,175,55,.2);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; max-width: var(--maxw); margin: 0 auto; padding: 12px 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--fg); }
+    .brand img { height: 40px; width: auto; border-radius: 8px; }
+    .brand .name { font-family: "Playfair Display", serif; font-size: 20px; letter-spacing: .5px; }
+    nav a { color: var(--fg); text-decoration: none; margin: 0 10px; padding: 8px 12px; border-radius: 999px; }
+    nav a:hover { background: rgba(212,175,55,.12); color: var(--gold); }
+    .cta {
+      background: linear-gradient(135deg, rgba(212,175,55,.15), rgba(212,175,55,.35));
+      color: var(--fg); border: 1px solid rgba(212,175,55,.45);
+      padding: 10px 16px; border-radius: 999px; text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+      display: inline-block;
+    }
+    .cta:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(212,175,55,.25); }
+    .hero { max-width: var(--maxw); margin: 0 auto; padding: 72px 20px 36px; display: grid; grid-template-columns: 1fr; align-items: center; gap: 28px; }
+    .hero-card {
+      background: radial-gradient(800px 300px at 20% 0%, rgba(212,175,55,.10), transparent 60%), var(--panel);
+      border: 1px solid rgba(212,175,55,.25);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px; display: grid; grid-template-columns: 1fr; gap: 22px; align-items: center;
+    }
+    .hero-media { display: flex; align-items: center; justify-content: center; }
+    .hero-media img { max-width: 240px; height: auto; display: block; filter: drop-shadow(0 10px 25px rgba(212,175,55,.25)); }
+    .hero h1 { font-family: "Playfair Display", serif; font-size: clamp(28px, 6vw, 48px); margin: 0; }
+    .tagline { color: var(--muted); font-size: 16px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    section { padding: 56px 20px; }
+    .section-inner { max-width: var(--maxw); margin: 0 auto; }
+    h2 { font-family: "Playfair Display", serif; font-size: clamp(24px, 5vw, 34px); margin: 0 0 18px; color: var(--gold); }
+    .card { background: var(--panel); border: 1px solid rgba(212,175,55,.22); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; }
+    .services { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    .service-group h3 { margin: 0 0 10px; font-size: 18px; letter-spacing: .2px; color: var(--fg); text-transform: uppercase; opacity: .9; }
+    .service-list { list-style: none; padding: 0; margin: 0; }
+    .service-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px dashed rgba(212,175,55,.25); }
+    .service-list li:last-child { border-bottom: 0; }
+    .svc-name { color: var(--fg); }
+    .svc-price { color: var(--gold); white-space: nowrap; }
+    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+    .contact-grid a { color: var(--fg); text-decoration: none; }
+    .contact-grid a:hover { color: var(--gold); }
+    footer { padding: 26px 20px 40px; color: var(--muted); border-top: 1px solid rgba(212,175,55,.2); }
+    footer .inner { max-width: var(--maxw); margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+    @media (min-width: 860px) {
+      .hero-card { grid-template-columns: 320px 1fr; }
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 2fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Halo Vermont home">
+        <img src="Halo-LogoV1.gif" alt="Halo Vermont logo" />
+        <span class="name">Halo Vermont</span>
+      </a>
+      <nav aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" href="#booking">Book Now</a>
+      </nav>
+    </div>
+  </header>
+  <main id="top" class="hero">
+    <div class="hero-card">
+      <div class="hero-media">
+        <img src="Halo-LogoV1.gif" alt="Halo Vermont logo" />
+      </div>
+      <div>
+        <h1>Where your inner light shines</h1>
+        <p class="tagline">Cuts, color, balayage, and treatments in the heart of Winooski, Vermont.</p>
+        <div class="actions">
+          <a class="cta" href="#booking">Book Online</a>
+          <a class="cta" href="tel:19177564138">Call 917.756.4138</a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section id="about">
+    <div class="section-inner card">
+      <h2>About Halo Vermont</h2>
+      <p>At <strong>Halo Vermont</strong>, we believe that everyone carries a light within them — and our mission is to help that light shine in the world.</p>
+      <p>Here, we combine artistry and skill to enhance your natural glow. Whether you’re visiting for a fresh cut, a unique color transformation, or simply a little self-care, <strong>Bonnie</strong> is dedicated to creating styles that reflect your individuality and lifestyle.</p>
+    </div>
+  </section>
+  <section id="services">
+    <div class="section-inner card">
+      <h2>Services & Pricing</h2>
+      <div class="services">
+        <div class="service-group">
+          <h3>Cuts & Styling</h3>
+          <ul class="service-list">
+            <li><span class="svc-name">Haircut</span><span class="svc-price">Starts at $70</span></li>
+            <li><span class="svc-name">Bang Trim</span><span class="svc-price">Starts at $20</span></li>
+            <li><span class="svc-name">Undercut Cleanup</span><span class="svc-price">Starts at $20</span></li>
+            <li><span class="svc-name">Shampoo Blow Dry</span><span class="svc-price">Starts at $60</span></li>
+            <li><span class="svc-name">Luxury Shampoo Blow Dry</span><span class="svc-price">Starts at $95</span></li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h3>Color Services</h3>
+          <ul class="service-list">
+            <li><span class="svc-name">Color Retouch</span><span class="svc-price">Starts at $128</span></li>
+            <li><span class="svc-name">Color Retouch &amp; Haircut</span><span class="svc-price">Starts at $160</span></li>
+            <li><span class="svc-name">Color Retouch, Glaze &amp; Haircut</span><span class="svc-price">Starts at $206</span></li>
+            <li><span class="svc-name">Color Retouch, Glaze &amp; Blowout</span><span class="svc-price">Starts at $174</span></li>
+            <li><span class="svc-name">Toner / Glaze / Color Wash</span><span class="svc-price">$46</span></li>
+            <li><span class="svc-name">Corrective Color</span><span class="svc-price">Variable</span></li>
+            <li><span class="svc-name">Signature Color (Full Balayage)</span><span class="svc-price">Starts at $300</span></li>
+            <li><span class="svc-name">Signature Color &amp; Haircut</span><span class="svc-price">Starts at $365</span></li>
+            <li><span class="svc-name">Signature Color (Base, Glaze, Few Foils)</span><span class="svc-price">Starts at $295</span></li>
+            <li><span class="svc-name">Signature Color (Base, Glaze, Foils &amp; Haircut)</span><span class="svc-price">Starts at $360</span></li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h3>Highlights &amp; Foils</h3>
+          <ul class="service-list">
+            <li><span class="svc-name">Full Foil (31+ foils)</span><span class="svc-price">Starts at $247</span></li>
+            <li><span class="svc-name">Full Foil &amp; Haircut</span><span class="svc-price">Starts at $280</span></li>
+            <li><span class="svc-name">Partial Foil (11–30 foils)</span><span class="svc-price">Starts at $228</span></li>
+            <li><span class="svc-name">Partial Foil &amp; Haircut</span><span class="svc-price">Starts at $260</span></li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h3>Treatments</h3>
+          <ul class="service-list">
+            <li><span class="svc-name">Deep Conditioning Treatment / Mask</span><span class="svc-price">$36</span></li>
+            <li><span class="svc-name">Keratin Express</span><span class="svc-price">$180+</span></li>
+            <li><span class="svc-name">Full Keratin</span><span class="svc-price">$380+</span></li>
+          </ul>
+        </div>
+        <div class="service-group">
+          <h3>Brows</h3>
+          <ul class="service-list">
+            <li><span class="svc-name">Brow Tint</span><span class="svc-price">$36</span></li>
+          </ul>
+        </div>
+      </div>
+      <p style="margin-top:14px; color: var(--muted); font-size: 14px;">Prices are starting rates and may vary based on hair length, density, and service complexity.</p>
+    </div>
+  </section>
+  <section id="booking">
+    <div class="section-inner card">
+      <h2>Book Online</h2>
+      <p style="margin-top:0; color: var(--muted);">Secure your appointment instantly via our online booking system.</p>
+      <div id="square-booking">
+        <script src='https://square.site/appointments/buyer/widget/vqmvyd1khsrf5i/LHMY00A5D47Y5.js'></script>
+      </div>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="section-inner card">
+      <h2>Contact & Location</h2>
+      <div class="contact-grid">
+        <div>
+          <p><strong>Phone:</strong> <a href="tel:19177564138">917.756.4138</a></p>
+          <p><strong>Email:</strong> <a href="mailto:halovermont@gmail.com">halovermont@gmail.com</a></p>
+          <p><strong>Address:</strong> <a href="https://maps.google.com/?q=25%20Winooski%20Falls%20Way%20Suite%20109,%20Winooski,%20VT" target="_blank" rel="noopener">25 Winooski Falls Way, Suite 109, Winooski, VT</a></p>
+          <p><strong>Instagram:</strong> <a href="https://instagram.com/HaloVermont" target="_blank" rel="noopener">@HaloVermont</a></p>
+        </div>
+        <div>
+          <a class="cta" href="#booking">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="inner">
+      <small>© <span id="year"></span> Halo Vermont. All rights reserved.</small>
+      <small>Winooski, Vermont</small>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
