@@ -1,103 +1,168 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halo Vermont</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding-top: 80px;
+}
+    header {
+      padding: 2rem;
+    }
+    nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #000;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(212,175,55,0.25);
+  z-index: 1000;
+      margin-top: 1rem;
+    }
+    nav a { margin: 0 1rem; text-decoration: none; font-family: serif; font-size: 1rem; color: #d4af37; letter-spacing: 2px; position: relative; transition: all 0.25s ease; }
+    nav a:hover { color: #fff4d1; text-shadow: 0 0 6px #d4af37, 0 0 12px rgba(212,175,55,0.8); }
+    .logo {
+      max-width: 250px;
+      margin: 1rem auto;
+      display: block;
+    }
+    .tagline {
+      font-family: serif;
+      font-size: 1.2rem;
+      color: #d4af37;
+      text-shadow: 0 0 8px #d4af37;
+      margin-top: 0.5rem;
+    }
+    .subtext {
+      font-size: 0.9rem;
+      font-weight: bold;
+      margin: 1rem auto;
+      max-width: 600px;
+      color: #fff;
+    }
+    section {
+      margin: 3rem auto;
+      max-width: 800px;
+      padding: 2rem;
+      border: 1px solid rgba(212,175,55,0.5);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(212,175,55,0.2);
+      background-color: rgba(0,0,0,0.6);
+    }
+    section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      font-family: serif;
+      color: #d4af37;
+    }
+    .category {
+      font-family: serif;
+      font-size: 1.3rem;
+      margin-top: 1.5rem;
+      color: #d4af37;
+    }
+    .service {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .service:last-child {
+      border-bottom: none;
+    }
+    footer {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: #000;
+      color: #d4af37;
+    }
+  </style>
 </head>
 <body>
+  <div style="height:60px;"></div>
   <header>
+    <img src="halo_logo_transparent.png" alt="Halo Vermont Logo" class="logo">
+    <div class="tagline">Because when your light shines the world shines too</div>
+    <div class="subtext">Cuts & Color, Balayage & Foils, Smoothing & Conditioning treatments in the heart of Winooski/Burlington, Vermont.</div>
     <nav>
-      <ul>
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#services">SERVICES</a></li>
-        <li><a href="#gallery">GALLERY</a></li>
-        <li><a href="#booking">BOOKING</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-      </ul>
+      <a href="#home">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#gallery">GALLERY</a>
+      <a href="#booking">BOOKING</a>
+      <a href="#contact">CONTACT</a>
     </nav>
   </header>
 
-  <section id="home" class="hero">
-    <img src="logo.gif" alt="Halo Vermont Logo" class="logo">
-    <h1 class="tagline">Because when your light shines the world shines too</h1>
-    <p class="intro">Cuts & Color, Balayage & Foils, Smoothing & Conditioning treatments in the heart of Winooski/Burlington, Vermont.</p>
-    <a href="#booking" class="btn">Book an Appointment</a>
-  </section>
-
-  <section id="about" class="box">
+  <section id="about">
     <h2>About Halo Vermont</h2>
-    <p>From Brooklyn to Burlington, my journey through fashion, music and design brought me to the chair at Halo Vermont Hair Studio.</p>
-    <p>I blend style with soul, creating looks that let your inner light shine bright on the outside.</p>
+    <p>From Brooklyn to Burlington, my journey through fashion, music and design brought me to the chair at Halo Vermont Hair Studio. I blend style with soul, creating looks that let your inner light shine bright on the outside.</p>
   </section>
 
-  <section id="services" class="box">
+  <section id="services">
     <h2>Services & Prices</h2>
 
-    <h3>Cuts & Styling</h3>
-    <ul>
-      <li>Haircut <span class="price">$70+</span></li>
-      <li>Bang Trim <span class="price">$20+</span></li>
-      <li>Undercut Cleanup <span class="price">$20+</span></li>
-      <li>Shampoo Blow Dry <span class="price">$60+</span></li>
-      <li>Luxury Shampoo Blow Dry <span class="price">$95+</span></li>
-    </ul>
+    <div class="category">Cuts & Styling</div>
+    <div class="service"><span>Haircut</span><span>$70+</span></div>
+    <div class="service"><span>Bang Trim</span><span>$20+</span></div>
+    <div class="service"><span>Undercut Cleanup</span><span>$20+</span></div>
+    <div class="service"><span>Shampoo Blow Dry</span><span>$60+</span></div>
+    <div class="service"><span>Luxury Shampoo Blow Dry</span><span>$95+</span></div>
 
-    <h3>Color Services</h3>
-    <ul>
-      <li>Color Retouch <span class="price">$128+</span></li>
-      <li>Color Retouch & Haircut <span class="price">$160+</span></li>
-      <li>Color Retouch, Glaze & Haircut <span class="price">$206+</span></li>
-      <li>Color Retouch, Glaze & Blowout <span class="price">$174+</span></li>
-      <li>Toner / Glaze / Color Wash <span class="price">$46</span></li>
-      <li>Corrective Color <span class="price">Variable</span></li>
-      <li>Signature Color (Balayage) <span class="price">$300+</span></li>
-      <li>Signature Color & Haircut <span class="price">$365+</span></li>
-      <li>Signature Color (Base, Glaze, Few Foils) <span class="price">$295+</span></li>
-      <li>Signature Color (Base, Glaze, Foils & Haircut) <span class="price">$360+</span></li>
-    </ul>
+    <div class="category">Color Services</div>
+    <div class="service"><span>Color Retouch</span><span>$128+</span></div>
+    <div class="service"><span>Color Retouch & Haircut</span><span>$160+</span></div>
+    <div class="service"><span>Color Retouch, Glaze & Haircut</span><span>$206+</span></div>
+    <div class="service"><span>Color Retouch, Glaze & Blowout</span><span>$174+</span></div>
+    <div class="service"><span>Toner / Glaze / Color Wash</span><span>$46</span></div>
+    <div class="service"><span>Corrective Color</span><span>Variable</span></div>
+    <div class="service"><span>Signature Color (Balayage)</span><span>$300+</span></div>
+    <div class="service"><span>Signature Color & Haircut</span><span>$365+</span></div>
+    <div class="service"><span>Signature Color (Base, Glaze, Few Foils)</span><span>$295+</span></div>
+    <div class="service"><span>Signature Color (Base, Glaze, Foils & Haircut)</span><span>$360+</span></div>
 
-    <h3>Highlights & Foils</h3>
-    <ul>
-      <li>Full Foil (31+ foils) <span class="price">$247+</span></li>
-      <li>Full Foil & Haircut <span class="price">$280+</span></li>
-      <li>Partial Foil (11–30 foils) <span class="price">$228+</span></li>
-      <li>Partial Foil & Haircut <span class="price">$260+</span></li>
-    </ul>
+    <div class="category">Traditional Highlights</div>
+    <div class="service"><span>Full Foil (31+ foils)</span><span>$247+</span></div>
+    <div class="service"><span>Full Foil & Haircut</span><span>$280+</span></div>
+    <div class="service"><span>Partial Foil (11–30 foils)</span><span>$228+</span></div>
+    <div class="service"><span>Partial Foil & Haircut</span><span>$260+</span></div>
 
-    <h3>Treatments</h3>
-    <ul>
-      <li>Deep Conditioning Treatment / Mask <span class="price">$36</span></li>
-      <li>Keratin Express <span class="price">$180+</span></li>
-      <li>Full Keratin <span class="price">$380+</span></li>
-    </ul>
+    <div class="category">Treatments</div>
+    <div class="service"><span>Deep Conditioning Treatment / Mask</span><span>$36+</span></div>
+    <div class="service"><span>Keratin Express</span><span>$180+</span></div>
+    <div class="service"><span>Full Keratin</span><span>$380+</span></div>
 
-    <h3>Brows</h3>
-    <ul>
-      <li>Brow Tint <span class="price">$36</span></li>
-    </ul>
+    <div class="category">Brows</div>
+    <div class="service"><span>Brow Tint</span><span>$36</span></div>
   </section>
 
-  <section id="gallery" class="box">
+  <section id="gallery">
     <h2>Gallery</h2>
-    <p class="coming-soon">Coming Soon</p>
+    <p>Coming Soon</p>
   </section>
 
-  <section id="booking" class="box">
-    <h2>Booking</h2>
-    <div class="booking-widget">
-      <script src='https://square.site/appointments/buyer/widget/vqmvyd1khsrf5i/LHMY00A5D47Y5.js'></script>
-    </div>
+  <section id="booking">
+    <h2>Book an Appointment</h2>
+    <script src='https://square.site/appointments/buyer/widget/vqmvyd1khsrf5i/LHMY00A5D47Y5.js'></script>
   </section>
 
-  <section id="contact" class="box">
+  <section id="contact">
     <h2>Contact</h2>
-    <p>Phone: <a href="tel:9177564138">917.756.4138</a></p>
-    <p>Email: <a href="mailto:halovermont@gmail.com">halovermont@gmail.com</a></p>
-    <p>Address: 25 Winooski Falls Way Suite 109, Winooski, VT</p>
-    <p>Instagram: <a href="https://instagram.com/HaloVermont" target="_blank">@HaloVermont</a></p>
+    <p>Phone: 917.756.4138<br>Email: halovermont@gmail.com<br>Address: 25 Winooski Falls Way Suite 109, Winooski, VT</p>
+    <p>Instagram: @HaloVermont</p>
   </section>
+
+  <footer>
+    <p>&copy; 2025 Halo Vermont</p>
+  </footer>
 </body>
 </html>
